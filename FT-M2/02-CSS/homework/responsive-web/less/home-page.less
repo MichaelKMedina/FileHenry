@@ -1,0 +1,153 @@
+// Conteindo del Home
+.intro {
+ padding-top: 110px;
+ height: auto;
+ width: 100%;
+}
+
+.home {
+  .intro {
+    h2 {
+      padding: 15px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      align-content: center;
+      border-radius: 40px;
+    }
+  }
+  .music-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    img {
+      width: 28%;
+      margin: 20px 2.5%;
+      border-radius: 20px;
+      height: 100%;
+    }
+  }
+  .musica-nueva {
+    padding: 15px;
+    h3 {
+      margin-top: 11px;
+    }
+    p {
+      margin-top: 13px;
+    }
+  }
+
+  .actual {
+    margin-top: 60px;
+    border-top: 1px solid @main-border-color;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: center;
+
+    .actual-text {
+      width: 50%;
+
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 26px;
+      }
+    }
+
+    .actual-img {
+      width: 46%;
+      margin-left: 4%;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    } 
+  }
+  .btn {
+    width: auto;
+    margin: auto;
+    margin-bottom: 5%;
+    .registrarse(black, pink, 20px);
+    border-radius: 2px;
+    font-size: 3em;
+    color: white;
+    padding: 1% 1%;
+    .flex-box();
+    .reg {
+      .flex-box();
+      width: 100%;
+    }
+  }
+  .btn:hover{
+    background: pink;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .home {
+    .intro { 
+      img {
+        width: 100%;
+        height: auto;
+        align-content: center;
+        border-radius: 20px;
+        padding: 0% 2%;
+        margin: 1% 0;
+      }
+    }
+    .music-images {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 100%;
+  
+      img {
+        width: 100%;
+        margin: 0;
+        padding: 1em;
+        border-radius: 20px;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .actual {
+      margin-top: 60px;
+      border-top: 1px solid @main-border-color;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      .actual-text {
+        width: 100%;
+      }
+      .actual-img {
+        width: 100%;
+        margin-left: auto;
+  
+        img {
+          width: 100%;
+          margin: 0;
+          padding: 1em;
+          border-radius: 20px;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    } 
+    .btn {
+      border-radius: 20px;
+      padding: 1% 5%;
+      margin: 1% 5%;
+      width: auto;
+      justify-content: center;
+      display: flex;
+    }
+  }
+}

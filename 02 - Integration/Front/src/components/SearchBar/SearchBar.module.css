@@ -1,0 +1,38 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.input1 {
+    width: 30%;
+    height: auto;
+    font-size: 1.2em;
+    Font-family: consolas, arial;
+    border: 2px solid white;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.botonAdd {
+    width: 25%;
+    height: 20%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    Font-family: consolas, arial;
+    border: 2px black;
+    border-radius: 1em;
+    background-color: rgb(0, 0, 0);
+}
+
+.botonAdd:hover{
+    background-color: rgb(6, 10, 126);
+}
+
+.botonImg {
+    justify-content: center;
+    object-fit: cover;
+    width: 10%;
+}

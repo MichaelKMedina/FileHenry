@@ -1,0 +1,27 @@
+// Mixins acá
+.central-todo { 
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+    display: block;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+}
+
+.registrarse(@color, @sombraColor, @borderR){
+    background-color: @color;
+    box-shadow: 1px 1px 2px 2px @sombraColor;
+    border-radius: @borderR;
+}
+
+.estilo-hover {
+    background-color: pink;
+    font: bold;
+    
+}
