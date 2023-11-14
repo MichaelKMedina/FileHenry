@@ -1,10 +1,6 @@
-function buildToDos(toDos) {
-    // Tu código acá:
-    let nuevoToDos = toDos.map(function(num) {
-      buildToDo(toDos[num], num);
-    })
-    return nuevoToDos;
-  }
+let arr = "esta prueba la frase    "
+
+console.log(arr.split(" "))
 
   
 
