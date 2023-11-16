@@ -30,10 +30,11 @@ function App() {
 
    function onSearch(id) {
       if(id > 0 && id < 827){
-      axios(`https://rickandmortyapi.com/api/character/${id}`)
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then(({ data }) => {
-         if(!characters.some((character) => character.id === data.id)){
-            setCharacters((oldChars) => [...oldChars, data]);
+         console.log(characters)
+         if(!characters.some((e) => e.id == data.id)){
+            setCharacters(characters.concat(data))
          }
          else {
             window.alert('Ya fue agregado ese ID!');
@@ -43,6 +44,7 @@ function App() {
       else{
          window.alert('¡No hay personajes con este ID!');
       }
+      console.log(characters)
    };
    
    const onClose = (id) => {
