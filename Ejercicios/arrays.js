@@ -1,6 +1,6 @@
-let arr = "esta prueba la frase    "
+let arr = "esta/prueba/la/frase"
 
-console.log(arr.split(" "))
+console.log(arr.split("/"))
 
   
 

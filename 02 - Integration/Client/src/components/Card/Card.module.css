@@ -1,0 +1,29 @@
+.carta {
+    margin: 1%;
+    border: solid white;
+}
+
+.carta img{
+    object-fit: cover;
+    width: auto;
+    height: auto;
+    padding: 0.2em;
+}
+
+.carta button{
+    width: 100%;
+    background-color: transparent;
+    font-size: 2em;
+    font-weight: bold;
+    border: solid 1px white;
+}
+
+button:hover {
+    background-color: white;
+}
+
+.carta H2{
+    border: solid 1px white;
+    margin: 0;
+    padding: 1%
+}

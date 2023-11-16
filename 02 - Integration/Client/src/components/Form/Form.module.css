@@ -1,0 +1,75 @@
+.form {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('https://ic.c4assets.com/brands/rick-and-morty/25061866-e35b-405b-9cb4-cb71748e9592.jpg?interpolation=progressive-bicubic&output-format=jpeg&output-quality=90{&resize}');
+}
+
+.fondo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    padding: 3.5em;
+    height: 300px;
+    background-color: rgba(5, 5, 5, 0.869);
+}
+
+.grid {
+    width: 100%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+}
+
+.grid span{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    justify-content: end;
+}
+
+.labelName {
+    color: rgb(246, 246, 246);
+    font-family: 'Black Ops One', cursive;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.inputEmail{
+    justify-content: center;
+    width: 15em;
+    height: 2.5em;
+    margin-left: 90px;
+    text-align: center;
+}
+
+.inputPass{
+    justify-content: center;
+    width: 15em;
+    height: 2.5em;
+    text-align: center;
+}
+
+.boton{
+    color: rgb(246, 246, 246);
+    font-family: 'Black Ops One', cursive;
+    font-size: 2.5em;
+    background-color:  rgba(5, 5, 5, 0.869);
+    border: 2px black;
+    border-radius: 0.5em;
+    padding: 20px;
+}
+
+.boton:hover{
+    background-color: rgb(32, 180, 22);
+}
+
+.error{
+    display: inline-block;
+    color: red;
+}
