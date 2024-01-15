@@ -5,7 +5,6 @@ import style from './Nav.module.css'
 export default function Nav({ onSearch }) {
   const ruta = useLocation();
   const isHome = ruta.pathname === '/home';
-  console.log(ruta)
   return (
     <div className={style.barra}>
         <div className={style.elementoNav}>

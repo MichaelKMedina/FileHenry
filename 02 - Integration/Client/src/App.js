@@ -29,8 +29,8 @@ function App() {
    }, [access]);
 
    function onSearch(id) {
-      if(id > 0 && id < 827){
-      axios(`https://rickandmortyapi.com/api/character/${id}`)
+      if(id > 0 && id < 6){
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then(({ data }) => {
          if(!characters.some((character) => character.id === data.id)){
             setCharacters((oldChars) => [...oldChars, data]);
@@ -44,7 +44,6 @@ function App() {
          window.alert('¡No hay personajes con este ID!');
       }
    };
-   
    const onClose = (id) => {
       const charactersFiltrado = characters.filter((caracter) => caracter.id !== parseInt(id));
       setCharacters(charactersFiltrado);
