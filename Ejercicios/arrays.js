@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var primerMetodo = function() {
     var promise = new Promise(function(resolve, reject){
        setTimeout(function() {
@@ -36,6 +37,11 @@ var primerMetodo = function() {
     .then(function(datos){
       console.log(datos); //debería ser el 'hola' que pasamos en tercerMetodo
     });
+=======
+let arr = [{id: 1, name:'pepe'},{id: 2, name:'mike'},{id: 3, name:'ka'},{id: 4, name:'ed'}]
+
+console.log(arr.some((e) => e.id == 3))
+>>>>>>> 914f341f37fe9440ab636da8f95f03248c6270ef
 
   
 
