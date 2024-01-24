@@ -1,7 +1,7 @@
 import style from './Card.module.css';
 import { Link } from 'react-router-dom';
 import { addFav, removeFav } from '../../Redux/actions';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector, connect } from 'react-redux'
 import { useState, useEffect } from 'react';
 
 const Card = (props) => {
