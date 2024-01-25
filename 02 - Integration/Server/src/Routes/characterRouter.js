@@ -1,9 +1,7 @@
 const { Router } = require("express");
 const getCharByIdControl = require("../controllers/getCharByIdControl");
 const loginControl = require("../controllers/loginControl");
-const {
-  postFav, deleteFav
-} = require("../controllers/favoritesControl");
+const { postFav, deleteFav } = require("../controllers/favoritesControl");
 
 const characterRouter = Router();
 
@@ -12,7 +10,7 @@ characterRouter.get("/:id", async (req, res) => {
     const character = await getCharByIdControl(req.params.id);
     res.status(200).json(character);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(404).json({ error: error.message });
   }
 });
 
