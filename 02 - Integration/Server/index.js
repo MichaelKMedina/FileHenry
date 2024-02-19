@@ -1,4 +1,9 @@
 const PORT = 3001;
-const server = require("./src/app")
+const server = require("./src/app");
+const { conn } = require("./src/DB_connection");
 
-server.listen(PORT, () => { console.log(`Servidor en puerto ${PORT} OK`) });
+conn.sync({ force: true }).then(() => {
+  server.listen(PORT, () => {
+    console.log(`Servidor en puerto ${PORT} OK`);
+  });
+});
