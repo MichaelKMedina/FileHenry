@@ -15,17 +15,14 @@ module.exports = (database) => {
         allowNull: false,
       },
       continente: {
-        type: DataTypes.ENUM("Africa", "Europa", "Oceania", "Asia", "South America", "North America", "Antarctica"),
+        type: DataTypes.STRING,
         allowNull: false,
       },
       capital: {
         type: DataTypes.STRING,
-        unique: true,
-        allowNull: false,
       },
       subregion: {
         type: DataTypes.STRING,
-        allowNull: false,
       },
       bandera: {
         type: DataTypes.STRING,
