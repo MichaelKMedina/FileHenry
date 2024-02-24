@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 
 module.exports = (database) => {
   database.define(
-    "Country",
+    "Countrie",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -20,9 +20,11 @@ module.exports = (database) => {
       },
       capital: {
         type: DataTypes.STRING,
+        defaultValue: "Sin capital",
       },
       subregion: {
         type: DataTypes.STRING,
+        defaultValue: "Sin Subregión",
       },
       bandera: {
         type: DataTypes.STRING,
@@ -32,10 +34,12 @@ module.exports = (database) => {
       area: {
         type: DataTypes.DECIMAL(10,2),
         allowNull: false,
+        defaultValue: 0,
       },
       poblacion: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 0,
       },
     },
     { timestamps: false }

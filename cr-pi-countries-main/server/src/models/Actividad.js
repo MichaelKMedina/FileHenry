@@ -16,7 +16,6 @@ module.exports = (database) => {
       },
       duracion: {
         type: DataTypes.INTEGER,
-        allowNull: false,
       },
       dificultad: {
         type: DataTypes.INTEGER,

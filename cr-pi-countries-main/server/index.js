@@ -1,12 +1,14 @@
-const server = require("./src/server");
+const PORT = 3000;
 const { conn } = require("./src/db.js");
-const PORT = 5000;
+const server = require("./src/server");
+const montarBaseDeDatos = require("./src/utils/montarBase");
 
 conn
   .sync({ force: true })
   .then(() => {
     server.listen(PORT, () => {
       console.log(`Server listening on port ${PORT}`);
+      montarBaseDeDatos();
     });
   })
   .catch((error) => console.error(error));

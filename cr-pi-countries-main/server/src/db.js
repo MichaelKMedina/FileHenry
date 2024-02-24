@@ -15,14 +15,14 @@ const database = new Sequelize(
 CountryModel(database);
 ActividadModel(database);
 
-const { Country, Actividad } = database.models;
+const { Countrie, Actividad } = database.models;
 
 // Aca vendrian las relaciones
-Country.belongsToMany(Actividad, { through: "ActividadCountry" });
-Actividad.belongsToMany(Country, { through: "ActividadCountry" });
+Countrie.belongsToMany(Actividad, { through: "ActividadCountry" });
+Actividad.belongsToMany(Countrie, { through: "ActividadCountry" });
 
 module.exports = {
-  Country,
+  Countrie,
   Actividad, // para poder importar los modelos así: const { Product, User } = require('./db.js');
   conn: database, // para importart la conexión { conn } = require('./db.js');
 };
