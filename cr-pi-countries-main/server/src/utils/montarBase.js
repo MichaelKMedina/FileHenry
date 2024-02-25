@@ -5,6 +5,7 @@ module.exports = async () => {
     try {
       const { data } = await axios("http://localhost:5000/countries");
       const response = data.map((pais) => ({
+        id: pais.cca3,
         name: pais.name.common,
         continente: pais.continents?.[0],
         capital: pais.capital?.[0],

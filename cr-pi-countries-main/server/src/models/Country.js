@@ -5,9 +5,10 @@ module.exports = (database) => {
     "Countrie",
     {
       id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
+        type: DataTypes.STRING,
         primaryKey: true,
+        allowNull: false,
+        unique: true,
       },
       name: {
         type: DataTypes.STRING,

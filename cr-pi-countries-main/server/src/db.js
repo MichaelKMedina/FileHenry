@@ -18,8 +18,8 @@ ActividadModel(database);
 const { Countrie, Actividad } = database.models;
 
 // Aca vendrian las relaciones
-Countrie.belongsToMany(Actividad, { through: "ActividadCountry" });
 Actividad.belongsToMany(Countrie, { through: "ActividadCountry" });
+Countrie.belongsToMany(Actividad, { through: "ActividadCountry" });
 
 module.exports = {
   Countrie,
