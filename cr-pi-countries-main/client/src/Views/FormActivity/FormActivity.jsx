@@ -29,7 +29,7 @@ const Form = () => {
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
         <div>
           <label htmlFor="nombre">nombre</label>
@@ -81,7 +81,7 @@ const Form = () => {
           />
           <span></span>
         </div>
-        <button type="submit" onClick={handleSubmit}>
+        <button type="submit">
           Crear
         </button>
       </div>
