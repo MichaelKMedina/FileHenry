@@ -1,6 +1,8 @@
 import axios from "axios";
 
 export const GET_COUNTRIES = "GET_COUNTRIES";
+export const FILTER = "FILTER";
+export const ORDER = "ORDER";
 
 export const getAllCountries = () => {
   return async (dispatch) => {
@@ -12,3 +14,10 @@ export const getAllCountries = () => {
     }
   };
 };
+
+export const filterCards = (continente) => ({
+  type: FILTER,
+  payload: continente,
+});
+
+export const orderCards = (orden) => ({ type: ORDER, payload: orden });

@@ -1,4 +1,3 @@
-const { Op } = require("sequelize");
 const { Countrie, Actividad} = require("../db");
 
 const getByIdCountriesControl = async (id) => {
