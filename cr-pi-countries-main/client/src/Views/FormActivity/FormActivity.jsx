@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { postActivities } from "../../redux/actions";
 
 const Form = () => {
-  const [form, setForm] = useState({
+  const dispatch = useDispatch();
+  const activities = useSelector((state) => state.activities)
+  const [newActivity, setNewActivity] = useState({
     nombre: "",
     dificultad: "",
     duracion: "",
@@ -11,15 +15,13 @@ const Form = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setForm({ ...form, [name]: value });
+    setNewActivity({ ...newActivity, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Envía los datos del formulario al action creator
-    createActivity(form);
-    // Limpiar el formulario después de enviar
-    setForm({
+    dispatch(postActivities(newActivity));
+    setNewActivity({
       nombre: "",
       dificultad: "",
       duracion: "",
@@ -36,7 +38,7 @@ const Form = () => {
           <input
             type="text"
             name="nombre"
-            value={form.nombre}
+            value={newActivity.nombre}
             onChange={handleChange}
           />
           <span></span>
@@ -46,7 +48,7 @@ const Form = () => {
           <input
             type="text"
             name="dificultad"
-            value={form.dificultad}
+            value={newActivity.dificultad}
             onChange={handleChange}
           />
           <span></span>
@@ -56,7 +58,7 @@ const Form = () => {
           <input
             type="text"
             name="duracion"
-            value={form.duracion}
+            value={newActivity.duracion}
             onChange={handleChange}
           />
           <span></span>
@@ -66,7 +68,7 @@ const Form = () => {
           <input
             type="text"
             name="pais"
-            value={form.pais}
+            value={newActivity.pais}
             onChange={handleChange}
           />
           <span></span>
@@ -76,7 +78,7 @@ const Form = () => {
           <input
             type="text"
             name="temporada"
-            value={form.temporada}
+            value={newActivity.temporada}
             onChange={handleChange}
           />
           <span></span>

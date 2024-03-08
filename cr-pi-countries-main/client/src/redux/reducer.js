@@ -1,8 +1,9 @@
-import { GET_COUNTRIES, FILTER, ORDER } from "./actions";
+import { GET_COUNTRIES, FILTER, ORDER, POST_ACTIVITIES } from "./actions";
 
 const initialstate = {
   countries: "",
   countriesOriginal: [],
+  activities: [],
 };
 
 const rootReducer = (state = initialstate, { type, payload }) => {
@@ -60,9 +61,13 @@ const rootReducer = (state = initialstate, { type, payload }) => {
         default:
           return { ...state, countriesOriginal: state.countries};
       }
+    case POST_ACTIVITIES:
+      state.activities.push(payload);
+      return payload;
     default:
       return { ...state };
   }
+  
 };
 
 export default rootReducer;
