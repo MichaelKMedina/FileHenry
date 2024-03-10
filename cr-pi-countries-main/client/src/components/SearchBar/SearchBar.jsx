@@ -10,10 +10,11 @@ const SearchBar = ({ filterByName }) => {
   const handleSearch = (e) => {
     e.preventDefault();
     filterByName(busqueda);
+    setBusqueda("");
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <div>
       <label htmlFor="busqueda">Búsqueda</label>
       <input
         type="text"
@@ -22,8 +23,8 @@ const SearchBar = ({ filterByName }) => {
         value={busqueda}
         onChange={handleInputChange}
       />
-      <button type="submit">Buscar</button>
-    </form>
+      <button type="submit" onClick={handleSearch}>Buscar</button>
+    </div>
   );
 };
 

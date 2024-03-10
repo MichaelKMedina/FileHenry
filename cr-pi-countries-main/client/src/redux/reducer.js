@@ -1,4 +1,12 @@
-import { GET_COUNTRIES, FILTER, ORDER, POST_ACTIVITIES } from "./actions";
+import {
+  GET_COUNTRIES,
+  FILTER,
+  ORDER,
+  POST_ACTIVITIES,
+  FILTER_BYNAME,
+  GET_ACTIVITIES,
+  FILTER_BYACTIVIDAD,
+} from "../helpers/declarationOfActions";
 
 const initialstate = {
   countries: "",
@@ -13,6 +21,16 @@ const rootReducer = (state = initialstate, { type, payload }) => {
         ...state,
         countries: payload,
         countriesOriginal: payload,
+      };
+    case GET_ACTIVITIES:
+      return {
+        ...state,
+        activities: [...state.activities, ...payload],
+      };
+    case FILTER_BYNAME:
+      return {
+        ...state,
+        countriesOriginal: [payload],
       };
     case FILTER:
       if (payload) {
@@ -59,15 +77,30 @@ const rootReducer = (state = initialstate, { type, payload }) => {
             ),
           };
         default:
-          return { ...state, countriesOriginal: state.countries};
+          return { ...state, countriesOriginal: state.countries };
       }
     case POST_ACTIVITIES:
-      state.activities.push(payload);
-      return payload;
+      return { ...state, activities: [...state.activities, payload] };
+    case FILTER_BYACTIVIDAD:
+      if (payload) {
+        const filtrado = state.countries.filter(country =>
+          country.Actividads.some(act => act.name === payload)
+        );
+        console.log(filtrado)
+        return {
+          ...state,
+          countriesOriginal: filtrado,
+        };
+      } else {
+        const filtrado = state.countries;
+        return {
+          ...state,
+          countriesOriginal: filtrado,
+        };
+      }
     default:
       return { ...state };
   }
-  
 };
 
 export default rootReducer;

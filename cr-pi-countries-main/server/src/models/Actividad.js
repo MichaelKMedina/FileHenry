@@ -20,9 +20,12 @@ module.exports = (database) => {
       dificultad: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        validate: {
+          isIn: [[1, 2, 3, 4, 5]],
+        },
       },
       temporada: {
-        type: DataTypes.ENUM('Primavera', 'Verano', 'Otoño', 'Invierno'),
+        type: DataTypes.ENUM("Primavera", "Verano", "Otoño", "Invierno"),
       },
     },
     { timestamps: false }

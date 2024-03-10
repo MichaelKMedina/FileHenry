@@ -9,7 +9,6 @@ const postActivitiesControl = async (data) => {
       dificultad,
       temporada,
     });
-
     await newActividad.addCountrie(pais);
     return newActividad;
   } else {

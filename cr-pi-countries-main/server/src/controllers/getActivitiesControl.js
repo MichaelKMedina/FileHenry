@@ -1,7 +1,9 @@
-const { Actividad } = require("../db");
+const { Actividad,  Countrie} = require("../db");
 
 const getActivitiesControl = async () => {
-  const allActivities = await Actividad.findAll();
+  const allActivities = await Actividad.findAll(
+    { include: Countrie }
+  );
   return allActivities;
 };
 

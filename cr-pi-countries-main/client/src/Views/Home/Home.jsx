@@ -1,10 +1,14 @@
 import { useDispatch } from "react-redux";
 import Cards from "../../components/Cards/Cards";
 import FilterBar from "../../components/FilterBar/FilterBar";
-import { orderCards, filterCards } from "../../redux/actions";
+import { orderCards, filterCards, filterCardsByActivity } from "../../redux/actions";
 
 const Home = ({ allCountries }) => {
   const dispatch = useDispatch();
+
+  const filterByActivity = (e) => {
+    dispatch(filterCardsByActivity(e.target.value));
+  };
 
   const handleOrder = (e) => {
     dispatch(orderCards(e.target.value));
@@ -15,7 +19,11 @@ const Home = ({ allCountries }) => {
 
   return (
     <div>
-      <FilterBar handleOrder={handleOrder} handleFilter={handleFilter} />
+      <FilterBar
+        handleOrder={handleOrder}
+        handleFilter={handleFilter}
+        filterByActivity={filterByActivity}
+      />
       <Cards allCountries={allCountries} />
     </div>
   );

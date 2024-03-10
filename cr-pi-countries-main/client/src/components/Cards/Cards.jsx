@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import { Link } from "react-router-dom";
 
@@ -21,6 +21,14 @@ const Cards = ({ allCountries }) => {
       setCurrentPage(currentPage + 1);
     }
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToTop();
+  }, [currentPage]);
 
   return (
     <>

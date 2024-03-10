@@ -1,12 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SearchBar from "../../components/SearchBar/SearchBar";
-//import FilterBar from "../../components/FilterBar/FilterBar";
 
-const NavBar = ({filterByName}) => {
+const NavBar = ({ filterByName, ruta }) => {
   return (
     <>
-      <SearchBar filterByName={filterByName}/>
-      <Link to={`/form`}>Crear Actividad</Link>
+      {ruta == "/Home" ? (
+        <>
+          <SearchBar filterByName={filterByName} />
+          <Link to={`/form`}>Crear Actividad</Link>
+        </>
+      ) : (
+        <>
+          <Link to={`/Home`}>HOME</Link>
+        </>
+      )}
     </>
   );
 };

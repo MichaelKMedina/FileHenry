@@ -1,0 +1,7 @@
+export const GET_COUNTRIES = "GET_COUNTRIES";
+export const GET_ACTIVITIES = "GET_ACTIVITIES";
+export const FILTER_BYNAME = "FILTER_BYNAME";
+export const FILTER = "FILTER";
+export const ORDER = "ORDER";
+export const POST_ACTIVITIES = "POST_ACTIVITIES";
+export const FILTER_BYACTIVIDAD = "FILTER_BYACTIVIDAD";

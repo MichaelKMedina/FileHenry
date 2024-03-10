@@ -5,20 +5,21 @@ const getByIdCountriesControl = require("../controllers/getByIdCountriesControl"
 const getByNameCountriesControl = require("../controllers/getByNameCountriesControl");
 
 countriesRouter.get("", async (req, res) => {
-  try {
-    const response = await getCountriesControl();
-    res.status(200).json(response);
-  } catch (error) {
-    res.status(404).json({ error: error.message });
-  }
-});
-
-countriesRouter.get("/name", async (req, res) => {
-  try {
-    const response = await getByNameCountriesControl(req.query);
-    res.status(200).json(response);
-  } catch (error) {
-    res.status(404).json({ error: error.message });
+  const busqueda = req.query;
+  if (Object.keys(busqueda).length > 0) {
+    try {
+      const response = await getByNameCountriesControl(busqueda);
+      res.status(200).json(response);
+    } catch (error) {
+      res.status(404).json({ error: error.message });
+    }
+  } else {
+    try {
+      const response = await getCountriesControl();
+      res.status(200).json(response);
+    } catch (error) {
+      res.status(404).json({ error: error.message });
+    }
   }
 });
 

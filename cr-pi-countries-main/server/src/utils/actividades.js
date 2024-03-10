@@ -1,0 +1,73 @@
+module.exports = [
+    {
+      name: "Senderismo",
+      duracion: 2,
+      dificultad: 3,
+      temporada: "Verano",
+      pais: ["VEN", "COL"],
+    },
+    {
+      name: "Natación",
+      duracion: 1,
+      dificultad: 2,
+      temporada: "Verano",
+      pais: ["BRB", "VEN"],
+    },
+    {
+      name: "Ciclismo",
+      duracion: 3,
+      dificultad: 4,
+      temporada: "Primavera",
+      pais: ["ISL", "COL"],
+    },
+    {
+      name: "Escalada",
+      duracion: 4,
+      dificultad: 5,
+      temporada: "Otoño",
+      pais: ["COL", "CHL"],
+    },
+    {
+      name: "Surf",
+      duracion: 2,
+      dificultad: 3,
+      temporada: "Verano",
+      pais: ["ISL", "CHL"],
+    },
+    {
+      name: "Esquí",
+      duracion: 5,
+      dificultad: 5,
+      temporada: "Invierno",
+      pais: ["CHL", "VEN"],
+    },
+    {
+      name: "Yoga",
+      duracion: 1,
+      dificultad: 1,
+      temporada: "Primavera",
+      pais: ["VEN", "ISL"],
+    },
+    {
+      name: "Pilates",
+      duracion: 1,
+      dificultad: 1,
+      temporada: "Otoño",
+      pais: ["COL", "VEN"],
+    },
+    {
+      name: "Baile",
+      duracion: 2,
+      dificultad: 2,
+      temporada: "Invierno",
+      pais: ["CHL", "VEN"],
+    },
+    {
+      name: "Patinaje sobre hielo",
+      duracion: 3,
+      dificultad: 3,
+      temporada: "Invierno",
+      pais: ["AGO", "COL"],
+    },
+  ];
+

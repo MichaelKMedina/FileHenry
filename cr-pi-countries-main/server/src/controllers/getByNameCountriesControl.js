@@ -1,11 +1,9 @@
 const { Op, Sequelize } = require("sequelize");
 const { Countrie } = require("../db");
 
-//ruta ejemplo: http://localhost:3000/countries/name?n=Colombia
-const getByIdCountriesControl = async (name) => {
-  name = name.n;
-
-  if (!name) throw new Error("No se ha proporcionado un ID");
+const getByIdCountriesControl = async (countrie) => {
+  let name = countrie.name;
+  if (!name) throw new Error("No se ha proporcionado un nombre");
   name = name.toLowerCase();
   const pais = await Countrie.findOne({
     where: {
