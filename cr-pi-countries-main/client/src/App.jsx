@@ -1,4 +1,3 @@
-import style from "./App.module.css";
 import PATHROUTES from "./helpers/PathRoutes.js";
 import Home from "./Views/Home/Home.jsx";
 import Landing from "./Views/Landing/Landing.jsx";
@@ -13,7 +12,6 @@ import { useDispatch, useSelector } from "react-redux";
 const App = () => {
   const navigate = useNavigate();
   const ruta = useLocation().pathname;
-  console.log(ruta)
   //Traer paises de la api y guardarlos
   const dispatch = useDispatch();
   const allCountries = useSelector((state) => state.countriesOriginal);

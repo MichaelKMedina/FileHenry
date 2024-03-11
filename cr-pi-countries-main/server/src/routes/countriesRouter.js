@@ -11,14 +11,14 @@ countriesRouter.get("", async (req, res) => {
       const response = await getByNameCountriesControl(busqueda);
       res.status(200).json(response);
     } catch (error) {
-      res.status(404).json({ error: error.message });
+      res.status(404).json("error:" + error);
     }
   } else {
     try {
       const response = await getCountriesControl();
       res.status(200).json(response);
     } catch (error) {
-      res.status(404).json({ error: error.message });
+      res.status(404).json("error:" + error);
     }
   }
 });
@@ -29,7 +29,7 @@ countriesRouter.get("/:idPais", async (req, res) => {
     const response = await getByIdCountriesControl(id);
     res.status(200).json(response);
   } catch (error) {
-    res.status(404).json({ error: error.message });
+    res.status(404).json("error:" + error);
   }
 });
 

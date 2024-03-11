@@ -46,6 +46,7 @@ const Cards = ({ allCountries }) => {
         <button onClick={prevPage} disabled={currentPage === 1}>
           Anterior
         </button>
+        <span>{currentPage}</span>
         <button
           onClick={nextPage}
           disabled={indexOfLastCard >= allCountries.length}

@@ -11,7 +11,7 @@ const getByIdCountriesControl = async (id) => {
       id: id
     },
     include: [
-      { model: Actividad, through: "ActividadCountry", attributes: ["name"] },
+      { model: Actividad, through: "ActividadCountry"},
     ],
   });
 

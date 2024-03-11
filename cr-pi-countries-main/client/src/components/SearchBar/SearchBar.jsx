@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import style from "./SearchBar.module.css"
 const SearchBar = ({ filterByName }) => {
   const [busqueda, setBusqueda] = useState("");
 
@@ -14,16 +14,18 @@ const SearchBar = ({ filterByName }) => {
   };
 
   return (
-    <div>
-      <label htmlFor="busqueda">Búsqueda</label>
+    <div className={style.elementoNav}>
+      <label htmlFor="busqueda"/>
       <input
+        className={style.barra}
         type="text"
         id="busqueda"
         name="busqueda"
         value={busqueda}
         onChange={handleInputChange}
+        placeholder="Busca por nombre"
       />
-      <button type="submit" onClick={handleSearch}>Buscar</button>
+      <button className={style.botonAdd}type="submit" onClick={handleSearch}>Buscar</button>
     </div>
   );
 };
