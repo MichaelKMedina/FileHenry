@@ -1,0 +1,50 @@
+.country {
+  max-width: 900px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f5f536;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+  padding: 1em;
+  background-color: rgba(169, 234, 228, 0.476);
+}
+
+.flag img {
+  width: 25em;
+  height: auto;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+  border-radius: 50px;
+}
+
+.countryInfo {
+  width: auto;
+  height: 50%;
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+.countryInfo table {
+  border-collapse: collapse;
+}
+
+.countryInfo td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.countryInfo td:first-child {
+  font-weight: bold;
+  white-space: nowrap;
+  width: 100px;
+}
+
+.countryDetalle h4 {
+  border: 0.23em outset #ccc;
+}

@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.botonpaginado {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 1em 0 5px;
+}
+
+.botonpaginado:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.indice {
+  padding: 0 10px;
+  font-weight: bold;
+}

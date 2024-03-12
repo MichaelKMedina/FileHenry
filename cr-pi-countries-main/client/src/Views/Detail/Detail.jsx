@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import style from "./Detail.module.css";
 
 const Detail = () => {
   const { idPais } = useParams();
@@ -19,18 +20,50 @@ const Detail = () => {
   }, []);
 
   return (
-    <div>
-      <h1>{country.id}</h1>
-      <h2>{country.name}</h2>
-      <img src={country.bandera}></img>
-      <h4>{country.continente}</h4>
-      <h4>{country.capital}</h4>
-      <h4>{country.subregion}</h4>
-      <h4>Area: {country.area}</h4>
-      <h4>Población: {country.poblacion}</h4>
+    <div className={style.country}>
+      <div className={style.flex}>
+        <div className={style.flag}>
+          <img src={country.bandera} />
+        </div>
+        <div className={style.countryInfo}>
+          <table>
+            <tbody>
+              <tr>
+                <td>ID:</td>
+                <td>{country.id}</td>
+              </tr>
+              <tr>
+                <td>País:</td>
+                <td>{country.name}</td>
+              </tr>
+              <tr>
+                <td>Continente:</td>
+                <td>{country.continente}</td>
+              </tr>
+              <tr>
+                <td>Capital:</td>
+                <td>{country.capital}</td>
+              </tr>
+              <tr>
+                <td>Subregión:</td>
+                <td>{country.subregion}</td>
+              </tr>
+              <tr>
+                <td>Área:</td>
+                <td>{country.area}</td>
+              </tr>
+              <tr>
+                <td>Población:</td>
+                <td>{country.poblacion}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <h1>Actividades</h1>
       {actividad &&
         actividad.map((a) => (
-          <div>
+          <div className={style.actividad}>
             <h2>{a.name}</h2>
             <h4>{a.duracion}</h4>
             <h4>{a.dificultad}</h4>

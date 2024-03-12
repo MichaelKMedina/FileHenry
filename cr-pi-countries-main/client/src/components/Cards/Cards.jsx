@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import { Link } from "react-router-dom";
+import style from "./Cards.module.css";
 
 const Cards = ({ allCountries }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,8 +33,9 @@ const Cards = ({ allCountries }) => {
 
   return (
     <>
+    <div className={style.flex}>
       {currentCards.map((pais) => (
-        <Link to={`/detail/${pais.id}`} key={pais.id}>
+        <Link className={style.card} to={`/detail/${pais.id}`} key={pais.id}>
           <Card
             key={pais.id}
             name={pais.name}
@@ -42,12 +44,14 @@ const Cards = ({ allCountries }) => {
           />
         </Link>
       ))}
-      <div>
-        <button onClick={prevPage} disabled={currentPage === 1}>
+      </div>
+      <div className={style.flex}>
+        <button className={style.botonpaginado} onClick={prevPage} disabled={currentPage === 1}>
           Anterior
         </button>
-        <span>{currentPage}</span>
+        <span className={style.indice}>{currentPage}</span>
         <button
+        className={style.botonpaginado}
           onClick={nextPage}
           disabled={indexOfLastCard >= allCountries.length}
         >

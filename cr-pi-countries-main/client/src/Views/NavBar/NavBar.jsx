@@ -10,18 +10,14 @@ const NavBar = ({ filterByName, ruta }) => {
           <li className={style.navitem}>
             <SearchBar filterByName={filterByName} />
           </li>
-          <li className={style.navitem}>
-            <Link className={style.linksForm} to={`/form`}>
-              Crear Actividad
-            </Link>
+          <li className={style.linksForm}>
+            <Link to={`/form`}>Crear Actividad</Link>
           </li>
         </ul>
       ) : (
         <ul className={style.navlist}>
-          <li className={style.navitem}>
-            <Link className={style.linksHome} to={`/Home`}>
-              HOME
-            </Link>
+          <li className={style.linksForm}>
+            <Link to={`/Home`}>HOME</Link>
           </li>
         </ul>
       )}

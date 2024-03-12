@@ -1,42 +1,44 @@
 .barra {
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5em;
-    background-color: black;
-    color: aliceblue;
+  width: 50%;
+  padding: 0.5em;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  height: auto;
+  border-radius: 0;
+  height: auto;
+  border: 0;
+  cursor: pointer;
 }
 
-.elementoNav{
-    width: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5em;
-    align-items: center;
-    width: 38%;
-    margin: 0 10px;
+.elementoNav {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
 }
 
 .botonAdd {
-    margin-left: 10px;
-    padding:8px;
-    width: auto;
-    height: 100%;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    Font-family: "Roboto", arial;
-    border: 2px black;
-    border-radius: 1em;
-    background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  color: #171512;
+  font-weight: bold;
+  transition: color 0.3s;
+  height: 100%;
+  padding: 0.4em 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
 }
 
-.botonAdd:hover{
-    background-color: rgb(216, 130, 17);
+.botonAdd:hover {
+  background-color: #dbb880;
+  color: #ffffff;
 }
 
-.elementoNavSearch{
-    display: flex;
-    align-items: center;
-    width: 60%;
+.elementoNavSearch {
+  display: flex;
+  align-items: center;
+  width: 60%;
 }

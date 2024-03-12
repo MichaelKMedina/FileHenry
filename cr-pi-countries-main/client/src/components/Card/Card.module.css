@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 17.5em;
+  height: 18em;
+  margin: 0.345em;
+  padding: 1em;
+  border: 0.0625em solid #ddd;
+  border-radius: 0.25em;
+  box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.card:hover {
+  background-color: rgb(255, 200, 99);
+}
+
+.cardimage {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+}
+
+.cardtittle {
+  flex: 1;
+  padding-top: 1em;
+  font-weight: bold;
+  font-size: 1.125em;
+  margin-bottom: 0.3125em;
+}
+
+.cardtext {
+  flex: 1;
+  padding-top: 0.5em;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 5px;
+}

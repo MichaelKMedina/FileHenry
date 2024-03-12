@@ -1,36 +1,61 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    background: rgba(248, 135, 6, 0.283);
-    padding: 10px 0;
+  margin: 0;
+  padding: 0;
+}
 
-  }
-  
-  .navlist {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navitem {
-    margin: 0 10px;
-  }
-  
-  .navitem a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .navitem a:hover {
-    color: #f39c12;
-  }
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f4c89b;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.navlist {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navitem {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
+}
+.linksForm a:hover {
+  color: #ffffff;
+}
+
+.linksForm:hover {
+  background-color: #dbb880;
+}
+
+.linksForm {
+  padding: 0.7em 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
+}
+
+.linksForm a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.linksForm a:visited {
+  color: #000;
+  text-decoration: none;
+}
