@@ -1,10 +1,12 @@
 .country {
+  height: 700px;
   max-width: 900px;
   width: 90%;
   margin: 20px auto;
   padding: 20px;
   background-color: #f5f5f536;
 }
+
 .flex {
   display: flex;
   justify-content: space-around;
@@ -47,4 +49,22 @@
 
 .countryDetalle h4 {
   border: 0.23em outset #ccc;
+}
+
+.actividadTabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+.actividadTabla th,
+.actividadTabla td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.actividadTabla th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }

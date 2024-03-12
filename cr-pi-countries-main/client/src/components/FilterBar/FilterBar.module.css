@@ -1,7 +1,7 @@
 .filterBar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 16px;
     padding: 16px;
     border-radius: 8px;

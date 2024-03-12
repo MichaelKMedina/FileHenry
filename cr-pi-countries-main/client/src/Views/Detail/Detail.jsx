@@ -61,15 +61,27 @@ const Detail = () => {
         </div>
       </div>
       <h1>Actividades</h1>
-      {actividad &&
-        actividad.map((a) => (
-          <div className={style.actividad}>
-            <h2>{a.name}</h2>
-            <h4>{a.duracion}</h4>
-            <h4>{a.dificultad}</h4>
-            <h4>{a.temporada}</h4>
-          </div>
-        ))}
+      <table class={style.actividadTabla}>
+        <thead>
+          <tr>
+            <th>Actividad</th>
+            <th>Duración</th>
+            <th>Dificultad</th>
+            <th>Temporada</th>
+          </tr>
+        </thead>
+        {actividad &&
+          actividad.map((a) => (
+            <tbody>
+              <tr>
+                <td>{a.name}</td>
+                <td>{a.duracion} Hrs</td>
+                <td>{a.dificultad}</td>
+                <td>{a.temporada}</td>
+              </tr>
+            </tbody>
+          ))}
+      </table>
     </div>
   );
 };

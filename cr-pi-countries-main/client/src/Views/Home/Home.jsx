@@ -1,7 +1,9 @@
 import { useDispatch } from "react-redux";
 import Cards from "../../components/Cards/Cards";
 import FilterBar from "../../components/FilterBar/FilterBar";
-import { orderCards, filterCards, filterCardsByActivity } from "../../redux/actions";
+import { getAllCountries, orderCards, filterCards, filterCardsByActivity } from "../../redux/actions";
+import style from "./Home.module.css"
+import { useEffect } from "react";
 
 const Home = ({ allCountries }) => {
   const dispatch = useDispatch();
@@ -17,8 +19,12 @@ const Home = ({ allCountries }) => {
     dispatch(filterCards(e.target.value));
   };
 
+  useEffect(() => {
+    dispatch(getAllCountries());
+  }, []);
+
   return (
-    <div>
+    <div className={style.home}>
       <FilterBar
         handleOrder={handleOrder}
         handleFilter={handleFilter}

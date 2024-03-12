@@ -17,7 +17,6 @@ const App = () => {
   const allCountries = useSelector((state) => state.countriesOriginal);
   //cada vez que renderizo:
   useEffect(() => {
-    navigate("/");
     dispatch(getAllActivities());
     dispatch(getAllCountries());
   }, []);

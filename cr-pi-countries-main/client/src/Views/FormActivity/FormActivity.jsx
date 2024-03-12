@@ -1,4 +1,5 @@
 import { useState } from "react";
+import style from "./FormActivity.module.css";
 import { useDispatch } from "react-redux";
 import { postActivities } from "../../redux/actions";
 import axios from "axios";
@@ -20,7 +21,7 @@ const Form = () => {
     pais: [],
   });
   //OTROS///////////////////////////////////////////////
-  const activeSubmit = () => 
+  const activeSubmit = () =>
     newActivity.name &&
     newActivity.dificultad &&
     newActivity.pais.length > 0 &&
@@ -64,60 +65,83 @@ const Form = () => {
     });
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={style.form} onSubmit={handleSubmit}>
       <div>
-        <h1>Crea tu actividad</h1>
-        <div>
-          <label htmlFor="name">Nombre</label>
+        <h1 className={style.h1}>Crea tu actividad</h1>
+        <div className={style.casilla}>
+          <label className={style.label} htmlFor="name">
+            Nombre
+          </label>
           <input
+            className={style.input}
             type="text"
             name="name"
             value={newActivity.name}
             onChange={handleChange}
           />
-          {!newActivity.name && <span>El campo esta vacio</span>}
-          {tieneNro(newActivity.name) && <span>No debe tener numeros</span>}
+          {!newActivity.name && (
+            <span className={style.span}>El campo esta vacio</span>
+          )}
+          {tieneNro(newActivity.name) && (
+            <span className={style.span}>No debe tener numeros</span>
+          )}
         </div>
-        <div>
-          <label htmlFor="Dificultad">Dificultad (1 al 5)</label>
+        <div className={style.casilla}>
+          <label className={style.label} htmlFor="Dificultad">
+            Dificultad (1 al 5)
+          </label>
           <input
+            className={style.input}
             type="number"
             name="dificultad"
             value={newActivity.dificultad}
             onChange={handleChange}
           />
-          {!newActivity.dificultad && <span>El campo esta vacio</span>}
+          {!newActivity.dificultad && (
+            <span className={style.span}>El campo esta vacio</span>
+          )}
           {!esEnteroYEstaEntre(newActivity.dificultad, 1, 5) && (
-            <span>debe estar entre 1 y 5</span>
+            <span className={style.span}>debe estar entre 1 y 5</span>
           )}
         </div>
-        <div>
-          <label htmlFor="duracion">Duración (en horas)</label>
+        <div className={style.casilla}>
+          <label className={style.label} htmlFor="duracion">
+            Duración (en horas)
+          </label>
           <input
+            className={style.input}
             type="number"
             name="duracion"
             value={newActivity.duracion}
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className={style.casilla}>
           <p>Paises agregados: {newActivity.pais}</p>
-          <label htmlFor="pais">Pais de actividad</label>
+          <label className={style.label} htmlFor="pais">
+            Pais de actividad
+          </label>
           <input
+            className={style.input}
             type="text"
             id="pais"
             name="pais"
             value={countryAdd}
             onChange={handleChangeOfPais}
           />
-          <button type="submit" onClick={addToCountry}>
+          <button className={style.button} type="submit" onClick={addToCountry}>
             Agregar
           </button>
-          {newActivity.pais.length == 0 && <span>No has escogido pais</span>}
+          {newActivity.pais.length == 0 && (
+            <span className={style.span}>No has escogido pais</span>
+          )}
         </div>
-        <div>
-          <label htmlFor="temporada">Temporada</label>
+        <div className={style.casilla}>
+          <label className={style.label} htmlFor="temporada">
+            Temporada
+          </label>
           <select
+          className={style.select}
             name="temporada"
             value={newActivity.temporada}
             onChange={handleChange}
@@ -128,9 +152,15 @@ const Form = () => {
             <option value="Otoño">Otoño</option>
             <option value="Primavera">Primavera</option>
           </select>
-          {!newActivity.temporada && <span>El campo esta vacio</span>}
+          {!newActivity.temporada && (
+            <span className={style.span}>El campo esta vacio</span>
+          )}
         </div>
-        <button type="submit" disabled={!activeSubmit()}>
+        <button
+          className={style.buttonF}
+          type="submit"
+          disabled={!activeSubmit()}
+        >
           Crear
         </button>
       </div>
